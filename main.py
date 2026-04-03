@@ -27,6 +27,12 @@ while True:
         click_.click()
     # print("Running...")
     element = driver.find_elements(By.CSS_SELECTOR, ".product.unlocked.enabled")
+    for i in element[::-1]:
+        class_string = i.get_attribute("class")
+        print(class_string)
+        classes =class_string.split()
+        if "product" in classes and "unlocked" in classes and "enabled" in classes:
+            i.click()
     # if elapsed >= 50:
     #     print("5 seconds reached. Stopping program.")
     #     break
