@@ -45,4 +45,4 @@ while True:
                 i.click()
             start_time = time.time()
         
-# click_.click()
+click_.quit()
